@@ -233,7 +233,7 @@ fun loginUser(
             }
 
             val requestBody = json.toString().toRequestBody("application/json".toMediaType())
-            val serverIp = sharedPrefs.getString("server_ip", "192.168.1.83") ?: "192.168.1.83"
+            val serverIp = sharedPrefs.getString("server_ip", "192.168.110.66") ?: "192.168.110.66"
             val request = Request.Builder()
                 .url("http://$serverIp:5000/api/login")
                 .post(requestBody)
