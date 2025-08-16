@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS user_settings (
+  user_id INT PRIMARY KEY,
+  settings JSON NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
